@@ -1,4 +1,6 @@
 clear all; close all; clc;
+%% This program will embed 4 bits of the message into each pixel of the picture
+%% You will need Communications Toolbox to run this program...sry
 
 lena = imread('lena.png');
 height = size(lena, 1);

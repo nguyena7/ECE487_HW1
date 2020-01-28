@@ -1,7 +1,8 @@
 clear all; close all; clc;
 
-%keyword = input("Enter the KEYWORD: ", 's');
-keyword = "CINCINNATI";
+keyword = input("Enter the KEYWORD: ", 's');
+keyword = convertCharsToStrings(keyword);
+%keyword = "CINCINNATI"
 message = "A TEST TO ENCRYPT USING PLAYFAIR CIPHER";
 
 % Prepare message for encryption
@@ -161,11 +162,11 @@ function denc_message = decrypt(matrix, message)
         [row2, col2] = find(matrix == char2);
         
          if row1 == row2
-            a = mod(col1 - 1, 5)
+            a = mod(col1 - 1, 5);
             if a == 0
                 a = 5;
             end
-            b = mod(col2 - 1, 5)
+            b = mod(col2 - 1, 5);
             if b == 0
                 b = 5;
             end
@@ -173,11 +174,11 @@ function denc_message = decrypt(matrix, message)
             denc_message = append(denc_message, matrix(row1, a));
             denc_message = append(denc_message, matrix(row2, b));
          elseif col1 == col2
-            a = mod(row1 - 1, 5)
+            a = mod(row1 - 1, 5);
             if a == 0
                 a = 5;
             end
-            b = mod(row2 - 1, 5)
+            b = mod(row2 - 1, 5);
             if b == 0
                 b = 5;
             end
